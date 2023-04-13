@@ -1,1 +1,1 @@
-SELECT * FROM matches WHERE hometeam = 'Barcelona' OR awayteam = 'Barcelona';
+SELECT name FROM divisions WHERE  name LIKE '%Scottish%';
