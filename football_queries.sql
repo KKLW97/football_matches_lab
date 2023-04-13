@@ -1,0 +1,1 @@
+SELECT * FROM matches WHERE hometeam = 'Barcelona' AND awayteam = 'Barcelona';
