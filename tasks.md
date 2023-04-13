@@ -26,8 +26,8 @@ SELECT name FROM divisions WHERE  name LIKE '%Scottish%';
 4) Find the value of the `code` for the `Bundesliga` division. Use that code to find out how many matches Freiburg have played in that division. HINT: You will need to query both tables
 
 ```sql
-<!-- Copy solution here -->
-
+SELECT code FROM divisions WHERE  name = 'Bundesliga';
+SELECT COUNT(id) FROM matches WHERE hometeam LIKE 'Freiburg' OR awayteam LIKE 'Freiburg' AND division_code = 'D1';
 
 ```
 
