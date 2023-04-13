@@ -37,6 +37,8 @@ SELECT COUNT(id) FROM matches WHERE hometeam = 'Freiburg' OR awayteam = 'Freibur
 SELECT DISTINCT hometeam FROM matches WHERE hometeam LIKE '%City%';
 -- EITHER SEARCH WILL RETURN THE UNIQUE TEAMS WITH CITY IN THEIR NAME AS IT IS ASSUMED THAT ALL TEAMS BOTH PLAY HOME AND AWAY GAMES
 SELECT DISTINCT awayteam FROM matches WHERE awayteam LIKE '%City%';
+-- can also use UNION to give same results from two SELECT statements and defaults to DISTINCT values
+SELECT hometeam FROM matches WHERE hometeam LIKE '%City%' UNION SELECT awayteam FROM matches WHERE awayteam LIKE '%City%';
 
 ```
 
