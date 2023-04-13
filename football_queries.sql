@@ -1,1 +1,1 @@
-SELECT * FROM matches WHERE hometeam = 'Barcelona' AND awayteam = 'Barcelona';
+SELECT * FROM matches WHERE hometeam = 'Barcelona' OR awayteam = 'Barcelona';
