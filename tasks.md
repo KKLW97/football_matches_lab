@@ -53,7 +53,7 @@ SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code = 'F1' OR divis
 7) Have Huddersfield played Swansea in any of the recorded matches?
 
 ```sql
-<!-- Copy solution here -->
+SELECT * FROM matches WHERE (hometeam = 'Huddersfield' AND awayteam = 'Swansea') OR (hometeam = 'Swansea' AND awayteam = 'Huddersfield');
 
 
 ```
