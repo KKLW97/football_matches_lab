@@ -1,4 +1,3 @@
--- SELECT divisions.code FROM divisions WHERE country = 'France' INNER JOIN matches ON divisions.code=matches.division_code;
+SELECT divisions.code FROM divisions WHERE country = 'France';
+SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code = 'F1' OR division_code = 'F2';
 -- SELECT DISTINCT hometeam FROM matches WHERE division_code = ;
--- SELECT DISTINCT awayteam FROM matches WHERE awayteam LIKE '%City%';
-SELECT hometeam FROM matches WHERE hometeam LIKE '%City%' UNION SELECT awayteam FROM matches WHERE awayteam LIKE '%City%';
