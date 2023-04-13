@@ -27,15 +27,16 @@ SELECT name FROM divisions WHERE  name LIKE '%Scottish%';
 
 ```sql
 SELECT code FROM divisions WHERE  name = 'Bundesliga';
-SELECT COUNT(id) FROM matches WHERE hometeam LIKE 'Freiburg' OR awayteam LIKE 'Freiburg' AND division_code = 'D1';
+SELECT COUNT(id) FROM matches WHERE hometeam = 'Freiburg' OR awayteam = 'Freiburg' AND division_code = 'D1';
 
 ```
 
 5) Find the teams which include the word "City" in their name. 
 
 ```sql
-<!-- Copy solution here -->
-
+SELECT DISTINCT hometeam FROM matches WHERE hometeam LIKE '%City%';
+-- EITHER SEARCH WILL RETURN THE UNIQUE TEAMS WITH CITY IN THEIR NAME AS IT IS ASSUMED THAT ALL TEAMS BOTH PLAY HOME AND AWAY GAMES
+SELECT DISTINCT awayteam FROM matches WHERE awayteam LIKE '%City%';
 
 ```
 
