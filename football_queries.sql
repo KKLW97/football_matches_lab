@@ -1,2 +1,2 @@
-SELECT code FROM divisions WHERE name = 'Eredivisie';
-SELECT COUNT(*) FROM matches WHERE division_code = 'N1' AND ftr = 'D' AND season BETWEEN 2010 AND 2015;
+SELECT code FROM divisions WHERE name = 'Premier League';
+SELECT * FROM matches WHERE division_code = 'E0' ORDER BY  fthg + ftag DESC, fthg DESC;
